@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-
+@MapperScan("com.qst.medical")
 public class MedicalApplication {
 
     public static void main(String[] args) {

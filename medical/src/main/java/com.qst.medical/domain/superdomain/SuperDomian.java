@@ -1,4 +1,4 @@
-package com.qst.medical.domain;
+package com.qst.medical.domain.superdomain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
