@@ -17,8 +17,6 @@ import java.util.List;
 
 /**
  * @description: 登录成功处理器
- * @author: liulindong
- * @create: 2021/8/31 0031 18:59
  **/
 @Component
 public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHandler {

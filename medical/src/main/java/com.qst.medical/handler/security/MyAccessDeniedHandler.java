@@ -13,8 +13,6 @@ import java.io.IOException;
 
 /**
  * @description: 无权限响应结果类
- * @author: liulindong
- * @create: 2021/9/1 17:20
  **/
 @Component
 public class MyAccessDeniedHandler implements AccessDeniedHandler {

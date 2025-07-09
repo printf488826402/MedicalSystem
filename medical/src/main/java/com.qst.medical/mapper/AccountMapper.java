@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 public interface AccountMapper {
     /*用户登录security*/
-    @Select("select * from account where uname=#{uname} or phonenumber=#{uname}")
+//    @Select("select * from account where uname=#{uname} or phonenumber=#{uname}")
 
     AccountModel securityLogin(String uname);
 }

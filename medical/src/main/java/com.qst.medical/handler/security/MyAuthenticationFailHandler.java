@@ -14,8 +14,6 @@ import java.io.IOException;
 
 /**
  * @description: 认证失败处理
- * @author: liulindong
- * @create: 2021/9/1 20:26
  **/
 @Component
 public class MyAuthenticationFailHandler implements AuthenticationFailureHandler {

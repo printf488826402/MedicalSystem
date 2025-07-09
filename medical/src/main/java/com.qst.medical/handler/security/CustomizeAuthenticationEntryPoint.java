@@ -11,8 +11,6 @@ import java.io.IOException;
 
 /**
  * @description: 未登录处理类
- * @author: liulindong
- * @create: 2021/8/31 0031 19:27
  **/
 @Component
 public class CustomizeAuthenticationEntryPoint implements AuthenticationEntryPoint {

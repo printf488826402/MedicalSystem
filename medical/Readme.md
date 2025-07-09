@@ -1,6 +1,33 @@
-6666666666666666666666
+2）初始化项目包、目录结构
 
-在本项目中，我们使用了以下技术：
-- 前端：React、TypeScript、Ant Design
-- 后端：Spring Boot、MyBatis Plus、MySQL
-- 其他：Docker、Kubernetes、Jenkins、GitLab
+在src/main/java目录下创建com.qst.medical包，并按照下图在项目中创建对应的包和文件夹。
+
+其中项目中各包作用：
+
+config：项目配置类包
+controller：项目控制器类包
+domain：实体类包
+entity：实体类数据模型包（用于对数据库进行交互）
+exception：自定义异常包
+filter：自定义校验类包
+handler：自定义处理类包
+interecption：自定义拦截器包
+mapper：数据库访问包
+model：实体类业务模型包（用于向前端展示数据）
+param：实体类查询参数模型包（用于接收前端查询参数）
+service：服务层包
+util：工具包
+
+        1）创建医师级别数据模型，包括医师级别实体类，医师级别业务模型。
+
+        2）创建诊治类型数据模型，包含诊治类型实体类，诊治类型业务模型。
+
+        3）创建医师数据模型，包括医师实体类，医师数据访问类，医师数据模型以及医师查询参数模型。
+
+        4）创建医师数据访问接口，声明获取医师信息，医师级别信息，诊治类型方法。
+
+        5）创建医师数据访问xml文件，实现接口查询。
+
+        6）创建医师service类，实现医师分页查询方法。
+
+        7）创建医师controller类，实现医师查询接口。
