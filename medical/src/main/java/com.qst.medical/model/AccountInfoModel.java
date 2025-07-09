@@ -1,5 +1,8 @@
 package com.qst.medical.model;
 
+import lombok.Data;
+
+@Data
 public class AccountInfoModel {
     private String realname;
     private String utype;

@@ -1,20 +1,35 @@
 package com.qst.medical.filter;
 
 import com.qst.medical.model.AccountModel;
+import com.qst.medical.service.UserDetailsServiceImpl;
+import com.qst.medical.util.JwtUtils;
 import io.jsonwebtoken.ExpiredJwtException;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
+import org.springframework.web.filter.OncePerRequestFilter;
 
+import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+
+@Component
+public class JwtFilter extends OncePerRequestFilter {
+
+    private static Logger logger = Logger.getLogger(JwtFilter.class);
+
+    @Autowired
+    private UserDetailsServiceImpl userDetailService;//自定义的登录逻辑类
 
 @Override
 protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
@@ -38,4 +53,5 @@ protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServl
         }
     }
     filterChain.doFilter(httpServletRequest, httpServletResponse);
+}
 }

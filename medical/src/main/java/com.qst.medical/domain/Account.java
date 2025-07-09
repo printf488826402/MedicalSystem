@@ -2,9 +2,14 @@ package com.qst.medical.domain;
 
 //import java.util.Date; // 表示标准的Java日期类，常用于业务逻辑中的日期操作
 import com.qst.medical.domain.superdomain.SuperDomain;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Date;  // 表示SQL专用的日期类，通常用于数据库交互操作
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Account extends SuperDomain {
     private Long id;
     private String uname;
@@ -26,5 +31,6 @@ public class Account extends SuperDomain {
                 ", createtime=" + createtime +
                 ", realname='" + realname + '\'' +
                 '}';
-    }}
+    }
+}
 //省略构造方法以及get/set方法

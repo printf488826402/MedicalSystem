@@ -1,9 +1,11 @@
 package com.qst.medical.config.security;
 
+import com.qst.medical.filter.JwtFilter;
 import com.qst.medical.handler.security.CustomizeAuthenticationEntryPoint;
 import com.qst.medical.handler.security.MyAccessDeniedHandler;
 import com.qst.medical.handler.security.MyAuthenticationFailHandler;
 import com.qst.medical.handler.security.MyAuthenticationSuccessHandler;
+import com.qst.medical.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +19,16 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
-
+import org.springframework.web.cors.CorsConfigurationSource;
+/*
+* 如果用的是Spring WebFlux，选择
+* org.springframework.web.cors.reactive.CorsConfigurationSource。
+如果用的是Spring MVC，选择org.springframework.web.cors.CorsConfigurationSource。
+* */
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+/*
+* 这个同理
+* */
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(jsr250Enabled = true)

@@ -1,5 +1,3 @@
-
-
 package com.qst.medical.config;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
